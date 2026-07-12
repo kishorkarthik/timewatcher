@@ -1,0 +1,22 @@
+[project]
+name = "timewatcher-core"
+version = "0.1.0"
+description = "Core domain models and business logic for TimeWatcher."
+readme = "README.md"
+authors = [
+    { name = "kishorkarthik", email = "kishorkarthikr@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = []
+
+[project.scripts]
+core = "core:main"
+
+[build-system]
+requires = ["uv_build>=0.11.28,<0.12.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
