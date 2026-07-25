@@ -1,9 +1,10 @@
 from timewatcher_core.models import Session
+from timewatcher_core.repositories.session_repository import SessionRepository
 
 class SessionManager:
-    def __init__(self) -> None:
+    def __init__(self, repository: SessionRepository) -> None:
+        self._repository = repository
         self._active_session: Session | None = None
-        self._completed_sessions: list[Session] = []
 
     def current_session(self) -> Session | None:
         return self._active_session
@@ -14,6 +15,8 @@ class SessionManager:
         
         session = Session.start(task)
         self._active_session = session
+        self._repository.save(session)
+
         return session
     
     def stop(self) -> Session:
@@ -23,10 +26,9 @@ class SessionManager:
         session = self._active_session
         session.stop()
 
-        self._completed_sessions.append(session)
         self._active_session = None
 
         return session
     
     def completed_sessions(self) -> list[Session]:
-        return list(self._completed_sessions)
+        return self._repository.completed()
