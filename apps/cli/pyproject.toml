@@ -5,8 +5,12 @@ description = "CLI-first time tracking system."
 readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
-    "typer>=0.26.8"
+    "typer>=0.26.8",
+    "timewatcher-core",
 ]
+
+[tool.uv.sources]
+timewatcher-core = { path = "../../packages/core", editable = true }
 
 [project.scripts]
 timewatcher = "timewatcher_cli.app:app"
@@ -14,6 +18,11 @@ timewatcher = "timewatcher_cli.app:app"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/timewatcher_cli"]
