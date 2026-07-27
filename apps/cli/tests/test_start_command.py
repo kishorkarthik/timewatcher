@@ -1,7 +1,7 @@
 from typer.testing import CliRunner
-
 from timewatcher_cli.app import app
-from timewatcher_cli.bootstrap import manager
+
+import timewatcher_cli.bootstrap as bootstrap
 
 runner = CliRunner()
 
@@ -11,4 +11,4 @@ def test_start_command_runs():
 
     assert result.exit_code == 0
     assert "Started: Implement start CLI command" in result.stdout
-    assert manager.current_session() is not None
+    assert bootstrap.manager.current_session() is not None

@@ -1,8 +1,8 @@
 import typer
 
-from timewatcher_cli.bootstrap import start_session
+import timewatcher_cli.bootstrap as bootstrap
 
 
 def start(task: str) -> None:
-    session = start_session.execute(task)
+    session = bootstrap.start_session.execute(task)
     typer.echo(f"Started: {session.task}")
