@@ -3,6 +3,7 @@ import typer
 from .commands.start import start
 from .commands.stop import stop
 from .commands.status import status
+from .commands.history import history
 
 app = typer.Typer(
     name="timewatcher",
@@ -16,7 +17,6 @@ def main() -> None:
     pass
 
 app.command()(start)
-
 app.command()(stop)
-
+app.command()(history)
 app.command()(status)
