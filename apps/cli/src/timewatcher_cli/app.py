@@ -3,6 +3,8 @@ import typer
 from .commands.start import start
 from .commands.stop import stop
 
+from .commands.history import history
+
 app = typer.Typer(
     name="timewatcher",
     help="Keep your hands on the keyboard—log your active work hours via the CLI.",
@@ -17,3 +19,6 @@ def main() -> None:
 app.command()(start)
 
 app.command()(stop)
+
+
+app.command()(history)
