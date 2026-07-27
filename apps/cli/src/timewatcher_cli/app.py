@@ -2,6 +2,7 @@ import typer
 
 from .commands.start import start
 from .commands.stop import stop
+from .commands.status import status
 
 app = typer.Typer(
     name="timewatcher",
@@ -17,3 +18,5 @@ def main() -> None:
 app.command()(start)
 
 app.command()(stop)
+
+app.command()(status)
