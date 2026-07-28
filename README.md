@@ -2,7 +2,7 @@
 
 > Keep your hands on the keyboard—log your active work hours via the CLI.
 
-TimeWatcher is a CLI-first time tracking application built for developers. It lets you start, stop, switch, and review work sessions without leaving the keyboard, making time tracking a natural part of your workflow.
+TimeWatcher is a CLI-first time tracking application built for developers. It helps you track focused work sessions without leaving the terminal, making time tracking a natural part of your development workflow.
 
 ## Why Time Tracking?
 
@@ -10,54 +10,114 @@ Software development is a craft where progress is often invisible. Hours can dis
 
 Time tracking is not about measuring every minute or turning work into a spreadsheet. It is about building awareness.
 
-By making time tracking a natural part of the developer workflow, TimeWatcher helps you understand your work patterns, reflect on your progress, and make better decisions about where your time goes.
+By making time tracking part of the developer workflow, TimeWatcher helps you understand your work patterns, reflect on progress, and make better decisions about where your time goes.
 
 ## Features
 
 ### CLI-first workflow
 
-Start, stop, switch, and review work sessions directly from the terminal. TimeWatcher is designed to make time tracking a natural part of your development workflow.
+Manage your work sessions directly from the terminal.
 
-### Session-based time tracking
+```bash
+timewatcher start "Implement authentication"
 
-Organize your work around focused sessions. Track what you are working on and build a clearer picture of how your time is spent.
+timewatcher status
+
+timewatcher stop
+
+timewatcher history
+```
+
+### Session-based tracking
+
+Organize work around focused sessions. Each session records what you are working on and helps build a clearer picture of your time.
+
+### Local-first storage
+
+Your data stays on your machine. TimeWatcher uses local SQLite persistence to provide a reliable workflow without requiring external services.
 
 ### Developer-focused experience
 
 Built with developers in mind, TimeWatcher prioritizes speed, simplicity, and minimal interruption.
 
-### Local-first by default
+## Installation
 
-Your data stays under your control. TimeWatcher begins with a reliable local workflow while keeping future extensibility in mind.
+Clone the repository:
 
-### Work insights
+```bash
+git clone https://github.com/kishorkarthik/timewatcher.git
+cd timewatcher
+```
 
-Review your history and reflect on your work patterns to make better decisions about your time.
+Install dependencies:
+
+```bash
+uv sync
+```
+
+Run TimeWatcher:
+
+```bash
+uv run timewatcher --help
+```
+
+## Current Commands
+
+### Start a session
+
+```bash
+timewatcher start "Working on API design"
+```
+
+### Check active session
+
+```bash
+timewatcher status
+```
+
+### Stop current session
+
+```bash
+timewatcher stop
+```
+
+### View completed sessions
+
+```bash
+timewatcher history
+```
 
 ## Roadmap
 
-TimeWatcher is currently in early development. The goal is to build a reliable, keyboard-first time tracking experience for developers.
+TimeWatcher is being developed as a reliable, keyboard-first time tracking tool for developers.
 
-### v0.1.0 — Foundation
+### v0.1.0 — Foundation ✅
 
-- [x] Establish project architecture
-- [x] Bootstrap CLI application
-- [ ] Build session-based tracking
-- [ ] Add task management
-- [ ] Implement local persistence
-- [ ] Add core time tracking commands
-- [ ] Add tests and documentation
+* [x] Establish project architecture
+* [x] Bootstrap CLI application
+* [x] Build session-based tracking
+* [x] Implement local SQLite persistence
+* [x] Add core time tracking commands
+  * [x] Start session
+  * [x] Stop session
+  * [x] View active status
+  * [x] View session history
+* [x] Add automated test coverage
+* [x] Add documentation
 
 ### Future
 
-- Improve insights and reporting
-- Expand platform support
-- Introduce additional ways to interact with TimeWatcher
-- Explore synchronization and collaboration features
+* Task switching
+* Improved insights and reporting
+* Richer session analytics
+* Additional ways to interact with TimeWatcher
+* Synchronization and collaboration features
 
 ## Contributing
 
-Contributions are welcome. Open an issue to discuss substantial changes before sending a pull request.
+Contributions are welcome.
+
+For substantial changes, open an issue first to discuss the proposed direction before submitting a pull request.
 
 ## License
 
