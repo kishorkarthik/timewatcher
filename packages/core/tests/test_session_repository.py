@@ -32,7 +32,7 @@ def test_active_session_returns_running_session():
     session = Session.start("return running session.")
     repo.save(session)
 
-    assert repo.active() is session
+    assert repo.active_session() is session
 
 def test_completed_returns_completed_sessions():
     repo = InMemorySessionRepository()
@@ -42,5 +42,5 @@ def test_completed_returns_completed_sessions():
 
     repo.save(session)
 
-    assert repo.completed() == [session]
+    assert repo.completed_sessions() == [session]
     
