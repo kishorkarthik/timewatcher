@@ -19,7 +19,7 @@ By making time tracking part of the developer workflow, TimeWatcher helps you un
 Manage your work sessions directly from the terminal.
 
 ```bash
-timewatcher start "Implement authentication"
+timewatcher start "example: let's get started."
 
 timewatcher status
 
@@ -66,7 +66,7 @@ uv run timewatcher --help
 ### Start a session
 
 ```bash
-timewatcher start "Working on API design"
+timewatcher start "example: prepare release v0.1.0"
 ```
 
 ### Check active session
@@ -91,7 +91,7 @@ timewatcher history
 
 TimeWatcher is being developed as a reliable, keyboard-first time tracking tool for developers.
 
-### v0.1.0 — Foundation ✅
+### v0.1.0 — Foundation 
 
 * [x] Establish project architecture
 * [x] Bootstrap CLI application
