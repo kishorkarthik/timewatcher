@@ -1,3 +1,56 @@
+# v0.2.0 — Clockin'
+
+Make TimeWatcher useful for understanding the time you clock in.
+
+## Domain
+
+- [ ] Duration
+- [ ] Time handling
+- [ ] Task identity
+
+## Application
+
+- [ ] Elapsed time
+- [ ] Session duration
+- [ ] Task switching
+- [ ] Time aggregation
+
+## Storage
+
+- [ ] Session queries
+- [ ] Date-based queries
+- [ ] Task-based queries
+
+## Commands
+
+- [ ] Improve `status`
+- [ ] Improve `stop`
+- [ ] Improve `history`
+- [ ] Improve `summary`
+- [ ] Add `switch`
+
+## Reporting
+
+- [ ] Duration formatting
+- [ ] Daily totals
+- [ ] Task totals
+- [ ] Basic session statistics
+
+## Quality
+
+- [ ] Time calculation tests
+- [ ] Aggregation tests
+- [ ] CLI workflow tests
+- [ ] Documentation
+
+## Release
+
+- [ ] Changelog
+- [ ] Roadmap update
+- [ ] Publish `v0.2.0`
+
+---
+
 # v0.1.0 — Foundation
 
 Establish the architecture and core functionality required for the first usable release of TimeWatcher.
@@ -15,29 +68,29 @@ Establish the architecture and core functionality required for the first usable 
 ## Application
 
 - [ ] Timer service
-- [ ] Session manager
+- [x] Session manager
 
 ## Storage
 
-- [ ] SQLite repository
+- [x] SQLite repository
 
 ## Commands
 
-- [ ] Start session
-- [ ] Stop session
-- [ ] Show current status
+- [x] Start session
+- [x] Stop session
+- [x] Show current status
 - [ ] Switch tasks
-- [ ] View history
+- [x] View history
 - [ ] View today's summary
 
 ## Quality
 
-- [ ] Logging
-- [ ] Configuration
-- [ ] Tests
+- [x] Logging
+- [x] Configuration
+- [x] Tests
 - [ ] CI
-- [ ] Documentation
+- x] Documentation
 
 ## Release
 
-- [ ] Publish v0.1.0
+- [x] Publish v0.1.0
